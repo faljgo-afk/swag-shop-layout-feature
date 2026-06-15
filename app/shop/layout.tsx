@@ -61,7 +61,7 @@ function ShopShell({ children }: { children: React.ReactNode }) {
       <header
         ref={headerRef}
         style={{ backgroundColor: headerBg, transition: 'background-color 0.3s', fontFamily, color: config.header_text_color ?? '#ffffff' }}
-        className={`${config.header_sticky ? 'sticky top-0 z-40' : ''} px-6 md:px-12 py-6 flex items-center justify-between`}
+        className={`${config.header_sticky ? 'fixed top-0 left-0 right-0 z-40' : ''} px-6 md:px-12 py-6 flex items-center justify-between`}
       >
         <button
           onClick={() => {
@@ -107,6 +107,7 @@ function ShopShell({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </header>
+      {config.header_sticky && <div className="h-[88px] md:h-[96px]" />}
 
       {isPreview && (
         <div className="bg-amber-400 px-4 py-2 flex items-center justify-between gap-4">
