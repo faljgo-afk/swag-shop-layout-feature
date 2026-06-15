@@ -9,7 +9,7 @@ const HERO_HEIGHT_PX: Record<string, string> = {
   S: '8rem', M: '16rem', L: '35rem', full: '100vh',
 }
 const HERO_HEIGHT_MOBILE_PX: Record<string, string> = {
-  S: '6rem', M: '10rem', L: '18rem', full: '100vh',
+  S: '6rem', M: '13rem', L: '22rem', full: '100vh',
 }
 const FONT_FAMILIES: Record<string, string> = {
   Inter: 'Inter, sans-serif', Montserrat: 'Montserrat, sans-serif',

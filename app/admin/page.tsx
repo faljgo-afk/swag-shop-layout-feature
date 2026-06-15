@@ -750,7 +750,7 @@ function HeroSection({ config, onUpdate, onHeroUpload, heroUploading, heroInputR
           <Field label="Height (mobile)">
             <SegmentedControl
               value={config.hero_height_mobile ?? ''}
-              options={[{ value: '', label: 'Auto' }, { value: 'S', label: 'S' }, { value: 'M', label: 'M' }, { value: 'L', label: 'L' }]}
+              options={[{ value: '', label: 'Auto' }, { value: 'M', label: 'M' }, { value: 'L', label: 'L' }]}
               onChange={v => onUpdate({ hero_height_mobile: v === '' ? null : v as 'S' | 'M' | 'L' | 'full' })}
             />
           </Field>
