@@ -234,8 +234,13 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
 
       {/* Mobile sticky Add to Cart */}
       <div
-        className="fixed bottom-0 left-0 right-0 md:hidden z-30 px-4 py-3"
-        style={{ backgroundColor: config.background_color ?? '#ffffff', borderTop: '1px solid #e5e7eb' }}
+        className="fixed bottom-0 left-0 right-0 md:hidden z-30 px-4"
+        style={{
+          backgroundColor: config.background_color ?? '#ffffff',
+          borderTop: '1px solid #e5e7eb',
+          paddingTop: '12px',
+          paddingBottom: 'max(12px, env(safe-area-inset-bottom))',
+        }}
       >
         <button
           onClick={handleAddToCart}

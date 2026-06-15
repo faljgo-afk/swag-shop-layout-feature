@@ -60,8 +60,14 @@ function ShopShell({ children }: { children: React.ReactNode }) {
     <>
       <header
         ref={headerRef}
-        style={{ backgroundColor: headerBg, transition: 'background-color 0.3s', fontFamily, color: config.header_text_color ?? '#ffffff' }}
-        className={`${config.header_sticky ? 'fixed top-0 left-0 right-0 z-40' : ''} px-6 md:px-12 py-6 flex items-center justify-between`}
+        style={{
+          ...(config.header_sticky ? { position: 'fixed', top: 0, left: 0, right: 0, zIndex: 40 } : {}),
+          backgroundColor: headerBg,
+          transition: 'background-color 0.3s',
+          fontFamily,
+          color: config.header_text_color ?? '#ffffff',
+        }}
+        className="px-6 md:px-12 py-6 flex items-center justify-between w-full"
       >
         <button
           onClick={() => {
